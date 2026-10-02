@@ -1,0 +1,10 @@
+ALTER TABLE patient_profiles ADD COLUMN surname1 VARCHAR(100);
+ALTER TABLE patient_profiles ADD COLUMN surname2 VARCHAR(100) NOT NULL DEFAULT '';
+UPDATE patient_profiles SET surname1 = last_name WHERE surname1 IS NULL;
+ALTER TABLE patient_profiles ALTER COLUMN surname1 SET NOT NULL;
+ALTER TABLE doctor_profiles ADD COLUMN surname1 VARCHAR(100);
+ALTER TABLE doctor_profiles ADD COLUMN surname2 VARCHAR(100) NOT NULL DEFAULT '';
+UPDATE doctor_profiles SET surname1 = last_name WHERE surname1 IS NULL;
+ALTER TABLE doctor_profiles ALTER COLUMN surname1 SET NOT NULL;
+CREATE TABLE password_reset_tokens (id BIGSERIAL PRIMARY KEY, user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE, token_hash VARCHAR(64) NOT NULL UNIQUE, expires_at TIMESTAMP NOT NULL, used_at TIMESTAMP);
+CREATE INDEX idx_password_reset_tokens_user_id ON password_reset_tokens(user_id);

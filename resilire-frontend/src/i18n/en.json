@@ -1,0 +1,470 @@
+{
+  "common": {
+    "appName": "Resilire",
+    "loading": "Loading...",
+    "loadingProfile": "Loading profile...",
+    "saveChanges": "Save Changes",
+    "editProfile": "Edit Profile",
+    "cancel": "Cancel",
+    "remove": "Remove",
+    "select": "Select",
+    "doctorTitle": "Dr.",
+    "generalSpecialization": "General",
+    "genderFemale": "Female",
+    "genderMale": "Male",
+    "genderOther": "Other",
+    "days": {
+      "MONDAY": "Monday",
+      "TUESDAY": "Tuesday",
+      "WEDNESDAY": "Wednesday",
+      "THURSDAY": "Thursday",
+      "FRIDAY": "Friday",
+      "SATURDAY": "Saturday",
+      "SUNDAY": "Sunday"
+    },
+    "status": {
+      "SCHEDULED": "Scheduled",
+      "CANCELLED": "Cancelled",
+      "COMPLETED": "Completed",
+      "OPEN": "In Progress"
+    },
+    "userStatus": {
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    }
+  },
+  "nav": {
+    "findDoctors": "Find Doctors",
+    "about": "About",
+    "help": "Help",
+    "myAppointments": "My Appointments",
+    "myConsultations": "My Consultations",
+    "myAccount": "My Account",
+    "logout": "Logout",
+    "login": "Login",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "rights": "© {{year}} Resilire. All rights reserved.",
+    "privacy": "Privacy",
+    "help": "Help",
+    "about": "About"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "The page you are looking for does not exist.",
+    "backHome": "Back to Home"
+  },
+  "landing": {
+    "heroTitle": "Healthcare consultations, simplified.",
+    "heroSubtitle": "Resilire connects patients with registered doctors for secure, convenient online consultations.",
+    "iAmPatient": "I'm a Patient",
+    "iAmDoctor": "I'm a Doctor",
+    "feature1Title": "Register in minutes",
+    "feature1Body": "Create your patient or doctor account and set up your profile.",
+    "feature2Title": "Secure by design",
+    "feature2Body": "Authentication and role-based access keep your account and data protected.",
+    "feature3Title": "Book and consult online",
+    "feature3Body": "Search doctors, book appointments and join your consultation through a Google Meet link generated for each booking."
+  },
+  "about": {
+    "title": "About Resilire",
+    "paragraph1": "Resilire is an online platform connecting patients with registered doctors for consultations. Patients can discover doctors, book consultations and join online consultations. Doctors can manage their professional profile, consultation availability and conduct online consultations.",
+    "paragraph2": "This release covers account registration, authentication and role-based access for patients, doctors and administrators, doctor search and appointment booking, and Google Meet-based online consultations with appointment reminders."
+  },
+  "help": {
+    "title": "Help & Support",
+    "intro": "Need help getting started? Register as a patient or doctor from the homepage, then log in to access your account.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1": "Patients can register, log in, manage their profile, search for doctors and book appointments.",
+    "faq2": "Doctors can register, log in, manage their professional profile and set weekly consultation availability.",
+    "faq3": "Each booked appointment includes an online consultation link; payments and full consultation history will be available in a future release.",
+    "contact": "For further assistance, contact support@resilire.com."
+  },
+  "privacy": {
+    "title": "Privacy & Security",
+    "paragraph1": "Resilire takes the security of your personal and medical information seriously. Passwords are stored using industry-standard hashing, and all API access requires authentication via secure tokens.",
+    "paragraph2": "Access to patient and doctor information is restricted by role, so only authorized users can view or modify data appropriate to their account type."
+  },
+  "login": {
+    "title": "Log In",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Log In",
+    "submitting": "Logging in...",
+    "newPatient": "New patient?",
+    "registerHere": "Register here",
+    "newDoctor": "New doctor?",
+    "errorFallback": "Invalid email or password",
+    "careLabel": "RESILIRE CARE",
+    "heroTitle": "Care, connected around you.",
+    "heroBody": "Manage appointments, consultations and health information in one secure place.",
+    "benefit1": "Secure personal health space",
+    "benefit2": "Online consultations with trusted clinicians",
+    "benefit3": "Appointments and prescriptions, kept together",
+    "welcomeLabel": "WELCOME BACK",
+    "intro": "Enter your details to continue to your care portal."
+    ,"forgotPassword": "Forgot password?"
+  },
+  "passwordRecovery": {
+    "title": "Recover your password",
+    "intro": "Enter your account email and we will send password recovery instructions.",
+    "submit": "Send recovery email",
+    "sent": "If an account exists for this email, recovery instructions have been sent.",
+    "backToLogin": "Back to login",
+    "errorFallback": "Unable to start password recovery"
+  },
+  "registerPatient": {
+    "title": "Patient Registration",
+    "email": "Email",
+    "password": "Password",
+    "rut": "RUT",
+    "firstName": "First Name",
+    "surname1": "Surname 1",
+    "surname2": "Surname 2",
+    "phone": "Phone",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "address": "Address",
+    "submit": "Register",
+    "submitting": "Creating account...",
+    "haveAccount": "Already have an account?",
+    "logInHere": "Log in",
+    "errorFallback": "Registration failed",
+    "profileLabel": "PATIENT PROFILE",
+    "heroTitle": "Set up your complete care profile.",
+    "heroBody": "A few details help clinicians provide more personal, informed care from your first consultation.",
+    "step1": "Account access",
+    "step2": "Personal details",
+    "step3": "Ready for care",
+    "createLabel": "CREATE ACCOUNT",
+    "requiredHint": "Fields marked with an asterisk are required.",
+    "accountTitle": "Account & identity",
+    "accountBody": "Secure your access and verify your identity.",
+    "detailsTitle": "About you",
+    "detailsBody": "Keep your basic details up to date."
+  },
+  "registerDoctor": {
+    "title": "Doctor Registration",
+    "email": "Email",
+    "password": "Password",
+    "rut": "RUT",
+    "firstName": "First Name",
+    "surname1": "Surname 1",
+    "surname2": "Surname 2",
+    "phone": "Phone",
+    "specialization": "Specialization",
+    "qualification": "Qualification",
+    "yearsOfExperience": "Years of Experience",
+    "consultationFee": "Consultation Fee",
+    "bio": "Bio",
+    "submit": "Register",
+    "submitting": "Creating account...",
+    "haveAccount": "Already have an account?",
+    "logInHere": "Log in",
+    "errorFallback": "Registration failed",
+    "profileLabel": "CLINICIAN PROFILE",
+    "heroTitle": "Build a profile patients can trust.",
+    "heroBody": "Present your credentials and professional expertise clearly before you begin accepting appointments.",
+    "step1": "Account access",
+    "step2": "Professional profile",
+    "step3": "Start practising",
+    "joinLabel": "JOIN RESILIRE",
+    "intro": "Create a complete profile to help patients choose confidently.",
+    "accountTitle": "Account & identity",
+    "accountBody": "Use your professional contact details.",
+    "detailsTitle": "Professional profile",
+    "detailsBody": "Help patients understand your experience and care approach."
+  },
+  "doctorSearch": {
+    "title": "Find a Doctor",
+    "specialization": "Specialization",
+    "specializationPlaceholder": "e.g. Cardiology",
+    "name": "Name",
+    "namePlaceholder": "Doctor name",
+    "search": "Search",
+    "noResults": "No doctors found.",
+    "yearsExperience": "{{years}} yrs experience",
+    "viewProfile": "View Profile",
+    "errorFallback": "Failed to load doctors"
+  },
+  "doctorPublicProfile": {
+    "backToSearch": "Back to search",
+    "notFound": "Doctor not found",
+    "yearsExperience": "{{years}} years of experience",
+    "consultationFee": "Consultation fee: ${{fee}}",
+    "weeklyAvailability": "Weekly Availability",
+    "noAvailability": "No availability published yet.",
+    "day": "Day",
+    "start": "Start",
+    "end": "End",
+    "bookAppointment": "Book an Appointment",
+    "date": "Date",
+    "submitBook": "Book Appointment",
+    "submitLoginToBook": "Log in to Book",
+    "availabilityHint": "The requested time must fall within one of the availability windows shown above.",
+    "bookSuccess": "Appointment booked! View it under My Appointments.",
+    "errorFallback": "Failed to book appointment",
+    "scheduleStep": "STEP 1 · SCHEDULE",
+    "scheduleHint": "Choose a date first, then select one of the doctor's available time slots.",
+    "chooseTime": "Choose a time",
+    "noSlotsForDate": "No consultation slots are available on this date.",
+    "available": "Available",
+    "booked": "Booked"
+    ,"noReviews": "No reviews yet"
+    ,"trustMessage": "Book a convenient consultation time with this verified professional."
+    ,"scheduleTitle": "Schedule your appointment"
+    ,"consultation": "consultation"
+    ,"online": "Online"
+    ,"defaultDuration": "60 min"
+    ,"viewHours": "View hours"
+    ,"step1": "Step 1 · Schedule"
+    ,"step2": "Step 2 · Details"
+    ,"step3": "Step 3 · Payment"
+    ,"chooseSchedule": "Choose your time"
+    ,"selectSlot": "Please choose an available time slot."
+    ,"continue": "Continue"
+    ,"back": "Back"
+    ,"patientDetails": "Appointment details"
+    ,"bookingForSomeoneElse": "Is this appointment for a family member or another person?"
+    ,"recipientRut": "Care recipient RUT"
+    ,"recipientFirstName": "Care recipient first name"
+    ,"recipientSurname1": "Care recipient surname 1"
+    ,"recipientSurname2": "Care recipient surname 2"
+    ,"recipientRequired": "Enter the care recipient's RUT and full name."
+    ,"comments": "Comments (optional)"
+    ,"acceptTerms": "I accept the appointment terms and cancellation policy."
+    ,"paymentTitle": "Choose payment method"
+    ,"paymentHint": "No payment gateway will be opened now. Your appointment will be confirmed with the selected payment method."
+    ,"bankTransfer": "Bank transfer"
+    ,"card": "Credit or debit card"
+    ,"confirmBooking": "Confirm appointment"
+    ,"confirmedTitle": "Your appointment is confirmed"
+    ,"viewAppointments": "View my appointments"
+    ,"about": "About me"
+    ,"qualification": "Qualifications"
+    ,"noBio": "This professional has not added a biography yet."
+  },
+  "admin": {
+    "title": "User Administration",
+    "email": "Email",
+    "role": "Role",
+    "status": "Status",
+    "created": "Created",
+    "disable": "Disable",
+    "enable": "Enable",
+    "errorFallbackLoad": "Failed to load users",
+    "errorFallbackUpdate": "Failed to update user"
+  },
+  "doctorProfile": {
+    "title": "My Profile",
+    "manageAvailability": "Manage availability →",
+    "rut": "RUT",
+    "firstName": "First Name",
+    "surname1": "Surname 1",
+    "surname2": "Surname 2",
+    "phone": "Phone",
+    "specialization": "Specialization",
+    "qualification": "Qualification",
+    "yearsOfExperience": "Years of Experience",
+    "consultationFee": "Consultation Fee",
+    "bio": "Bio",
+    "save": "Save Changes",
+    "successUpdate": "Profile updated",
+    "errorFallbackLoad": "Failed to load profile",
+    "errorFallbackUpdate": "Failed to update profile"
+    ,"profilePhoto": "Profile photo"
+    ,"photoHint": "JPEG, PNG or WebP, up to 5 MB."
+    ,"photoUpdated": "Profile photo updated"
+    ,"photoError": "Failed to upload profile photo"
+  },
+  "doctorAvailability": {
+    "title": "My Availability",
+    "day": "Day",
+    "start": "Start",
+    "end": "End",
+    "addSlot": "Add Slot",
+    "noSlots": "No availability set yet.",
+    "remove": "Remove",
+    "duration": "Appointment duration",
+    "minutes": "min",
+    "customDuration": "Custom duration",
+    "overlapError": "This availability overlaps an existing window.",
+    "errorFallbackLoad": "Failed to load availability",
+    "errorFallbackAdd": "Failed to add availability",
+    "errorFallbackRemove": "Failed to remove slot"
+  },
+  "doctorAppointments": {
+    "title": "My Appointments",
+    "patient": "Patient",
+    "patientRut": "Patient RUT",
+    "date": "Date",
+    "time": "Time",
+    "status": "Status",
+    "consultation": "Consultation",
+    "joinConsultation": "Join Consultation",
+    "joinOnline": "Join online",
+    "linkOpensLater": "Link Open only before 15 mins prior to the appointment time",
+    "consultationRecord": "Consultation Record",
+    "markCompleted": "Mark Completed",
+    "cancel": "Cancel",
+    "noAppointments": "No appointments yet.",
+    "errorFallbackLoad": "Failed to load appointments",
+    "errorFallbackCancel": "Failed to cancel appointment",
+    "errorFallbackComplete": "Failed to complete appointment"
+    ,"confirmCancel": "Cancel this appointment? This action cannot be undone."
+    ,"showCompleted": "Show completed and cancelled appointments"
+    ,"showActive": "Show upcoming and in-progress appointments"
+  },
+  "patientProfile": {
+    "title": "My Profile",
+    "rut": "RUT",
+    "firstName": "First Name",
+    "surname1": "Surname 1",
+    "surname2": "Surname 2",
+    "phone": "Phone",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "address": "Address",
+    "save": "Save Changes",
+    "successUpdate": "Profile updated",
+    "errorFallbackLoad": "Failed to load profile",
+    "errorFallbackUpdate": "Failed to update profile"
+  },
+  "patientAppointments": {
+    "title": "My Appointments",
+    "doctor": "Doctor",
+    "doctorRut": "Doctor RUT",
+    "specialization": "Specialization",
+    "date": "Date",
+    "time": "Time",
+    "status": "Status",
+    "consultation": "Consultation",
+    "joinConsultation": "Join Consultation",
+    "joinOnline": "Join online",
+    "linkOpensLater": "Link Open only before 15 mins prior to the appointment time",
+    "consultationRecord": "Consultation Record",
+    "cancel": "Cancel",
+    "noAppointments": "No appointments booked yet.",
+    "errorFallbackLoad": "Failed to load appointments",
+    "errorFallbackCancel": "Failed to cancel appointment"
+    ,"confirmCancel": "Cancel this appointment? This action cannot be undone."
+    ,"showCompleted": "Show completed appointments"
+    ,"showActive": "Show upcoming and in-progress appointments"
+  },
+  "doctorConsultation": {
+    "backToAppointments": "Back to appointments",
+    "title": "Consultation",
+    "patient": "Patient",
+    "patientRut": "Patient RUT",
+    "date": "Date",
+    "detailsTitle": "Consultation Details",
+    "chiefComplaint": "Chief Complaint",
+    "diagnosis": "Diagnosis",
+    "notes": "Notes",
+    "medicalHistory": "Medical History",
+    "surgicalHistory": "Surgical History",
+    "psychiatricHistory": "Psychiatric History",
+    "familyHistory": "Family History",
+    "consumption": "Substance Use",
+    "tobaccoUse": "Tobacco use",
+    "tobaccoDetails": "Tobacco use details",
+    "alcoholUse": "Alcohol use",
+    "alcoholDetails": "Alcohol details",
+    "drugUse": "Drug use",
+    "drugDetails": "Drug use details",
+    "yes": "Yes",
+    "no": "No",
+    "anamnesis": "Anamnesis",
+    "mentalExam": "Mental Status Examination",
+    "cie10Diagnosis": "CIE-10 Diagnosis",
+    "cie10Placeholder": "Code and diagnosis, e.g. F41.1 – Generalized anxiety disorder",
+    "indications": "Clinical Indications",
+    "saveDetails": "Save Details",
+    "detailsSaved": "Consultation details saved",
+    "prescriptionTitle": "Prescription",
+    "finalized": "Finalized",
+    "medicines": "Medicines",
+    "medicineName": "Medicine",
+    "medicineNamePlaceholder": "e.g. Amoxicillin",
+    "dosage": "Dosage",
+    "frequency": "Frequency",
+    "duration": "Duration",
+    "instructions": "Instructions",
+    "addMedicine": "Add Medicine",
+    "tests": "Diagnostic Tests",
+    "testName": "Test",
+    "testNamePlaceholder": "e.g. Complete Blood Count",
+    "addTest": "Add Test",
+    "noTests": "No diagnostic tests added yet.",
+    "prescriptionNotes": "Additional Notes",
+    "saveDraft": "Save Draft",
+    "finalizePrescription": "Finalize Prescription",
+    "confirmFinalize": "Once finalized, this prescription can no longer be edited. Continue?",
+    "draftSaved": "Prescription draft saved",
+    "prescriptionFinalized": "Prescription finalized",
+    "downloadPdf": "Download Medical Prescription",
+    "medicalCertificate": "Medical Certificate",
+    "certificateReason": "Certificate purpose",
+    "certificateHint": "Save the consultation record first; the certificate uses this purpose and the patient's registered details.",
+    "downloadCertificate": "Download Certificate",
+    "errorFallbackLoad": "Failed to load consultation",
+    "errorFallbackSaveDetails": "Failed to save consultation details",
+    "errorFallbackSaveDraft": "Failed to save prescription draft",
+    "errorFallbackFinalize": "Failed to finalize prescription",
+    "errorFallbackDownload": "Failed to download prescription"
+  },
+  "patientConsultations": {
+    "title": "Consultation History",
+    "subtitle": "View your past consultations and prescriptions.",
+    "noConsultations": "You have no recorded consultations yet.",
+    "prescriptionAvailable": "Prescription available",
+    "viewDetails": "View Details",
+    "errorFallbackLoad": "Failed to load consultation history"
+  },
+  "patientConsultationDetail": {
+    "title": "Consultation Details",
+    "backToHistory": "Back to consultation history",
+    "backToAppointments": "Back to appointments",
+    "doctor": "Doctor",
+    "doctorRut": "Doctor RUT",
+    "date": "Date",
+    "detailsTitle": "Consultation Notes",
+    "chiefComplaint": "Chief Complaint",
+    "diagnosis": "Diagnosis",
+    "notes": "Notes",
+    "noDetails": "The doctor has not added any notes yet.",
+    "inProgress": "This consultation is still in progress. Details will appear here once your doctor completes it.",
+    "prescriptionTitle": "Prescription",
+    "available": "Available",
+    "medicines": "Medicines",
+    "noMedicines": "No medicines prescribed.",
+    "medicineName": "Medicine",
+    "dosage": "Dosage",
+    "frequency": "Frequency",
+    "duration": "Duration",
+    "instructions": "Instructions",
+    "tests": "Diagnostic Tests",
+    "noTests": "No diagnostic tests recommended.",
+    "testName": "Test",
+    "additionalNotes": "Additional Notes",
+    "offlineFile": "Uploaded file",
+    "download": "Download Prescription",
+    "noPrescriptionYet": "No prescription has been recorded for this consultation yet.",
+    "noRecordYet": "No consultation record exists yet for this appointment.",
+    "notFound": "Consultation not found",
+    "errorFallbackLoad": "Failed to load consultation",
+    "errorFallbackDownload": "Failed to download prescription"
+  },
+  "prescriptionUpload": {
+    "title": "Upload Offline Prescription",
+    "hint": "If you have a prescription from an in-person or external consultation, you can upload a scanned copy or photo (PDF, JPEG or PNG, max 10 MB) and associate it with this appointment.",
+    "selectFile": "Drag & drop or choose a file to upload",
+    "notes": "Notes (optional)",
+    "submit": "Upload Prescription",
+    "submitting": "Uploading...",
+    "success": "Prescription uploaded successfully",
+    "errorFileRequired": "Please select a file to upload",
+    "errorFallback": "Failed to upload prescription"
+  }
+}

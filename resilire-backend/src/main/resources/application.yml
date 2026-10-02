@@ -1,0 +1,86 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: resilire-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/resilire_db
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+  messages:
+    basename: messages
+    encoding: UTF-8
+    fallback-to-system-locale: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mail:
+    host: ${SMTP_HOST:}
+    port: ${SMTP_PORT:587}
+    username: ${SMTP_USERNAME:}
+    password: ${SMTP_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+resilire:
+  jwt:
+    secret: ${JWT_SECRET:c2hoUmVzaWxpcmVEZXZPbmx5U2VjcmV0S2V5Q2hhbmdlSW5Qcm9kdWN0aW9uMTIzNDU2Nzg=}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+  # Release 5 - Prescription & Consultation History. Offline/manually-prepared prescriptions
+  # uploaded by patients are stored on local disk under this directory (PDF/JPEG/PNG only).
+  storage:
+    prescriptions-dir: ${PRESCRIPTION_STORAGE_DIR:uploads/prescriptions}
+    prescriptions-max-size-bytes: ${PRESCRIPTION_MAX_FILE_SIZE_BYTES:10485760}
+
+# Release 4 - Online Consultation (Google Meet integration)
+# google.calendar.provider selects the MeetingLinkProvider bean:
+#   - placeholder     (default) local fake link, no Google credentials needed
+#   - service-account production; requires Google Workspace + domain-wide delegation
+#   - oauth           dev/testing against a personal Gmail account's own calendar
+google:
+  calendar:
+    provider: ${GOOGLE_CALENDAR_PROVIDER:placeholder}
+    timezone: ${GOOGLE_CALENDAR_TIMEZONE:UTC}
+    # provider: service-account
+    service-account-email: ${GOOGLE_SERVICE_ACCOUNT_EMAIL:}
+    private-key: ${GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:}
+    impersonate-user: ${GOOGLE_CALENDAR_IMPERSONATE_USER:}
+    # provider: oauth
+    oauth:
+      client-id: ${GOOGLE_OAUTH_CLIENT_ID:}
+      client-secret: ${GOOGLE_OAUTH_CLIENT_SECRET:}
+      refresh-token: ${GOOGLE_OAUTH_REFRESH_TOKEN:}
+
+# Release 4 - appointment reminders. Email sending is a no-op (logged only) until
+# notification.email.enabled=true and spring.mail.* are configured with real SMTP creds.
+notification:
+  email:
+    enabled: ${NOTIFICATION_EMAIL_ENABLED:false}
+    from: ${NOTIFICATION_EMAIL_FROM:no-reply@resilire.com}
+  reminder:
+    minutes-before: ${REMINDER_MINUTES_BEFORE:60}
+
+consultation:
+  join-window-minutes-before: ${JOIN_WINDOW_MINUTES_BEFORE:15}
+
+logging:
+  level:
+    com.resilire.backend: INFO

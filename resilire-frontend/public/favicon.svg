@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-label="Resilire">
+  <g transform="translate(58,10) scale(0.9)" fill="#1e4d7b">
+    <circle cx="13" cy="7" r="7" />
+    <rect x="11" y="12" width="4" height="118" rx="2" />
+    <polygon points="13,134 8,122 18,122" />
+    <path d="M13,30 Q-8,38 -6,52 Q-4,66 13,68" fill="none" stroke="#1e4d7b" stroke-width="4" stroke-linecap="round" />
+    <path d="M13,52 Q34,54 32,68 Q30,82 13,86" fill="none" stroke="#1e4d7b" stroke-width="4" stroke-linecap="round" />
+    <ellipse cx="-4" cy="52" rx="5" ry="3.5" transform="rotate(-20,-4,52)" />
+    <ellipse cx="32" cy="68" rx="5" ry="3.5" transform="rotate(20,32,68)" />
+  </g>
+</svg>
