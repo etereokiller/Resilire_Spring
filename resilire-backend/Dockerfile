@@ -1,8 +1,8 @@
 # --- Build Stage ---
-FROM maven:3.9.6-eclipse-temurin-21-alpine ASWORKDIR
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 
-# Copiar todo el proyecto para compilar sin problemas de dependencias separadas
+# Copiar todo el proyecto para compilar sin problemas
 COPY . .
 
 # Asegurar permisos de ejecución para mvnw y compilar directo
@@ -14,7 +14,7 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Copiar el JAR generado desde la etapa de compilación
-COPY --from=WORKDIR /app/target/*.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 # Render asigna y expone dinámicamente el puerto 10000
 EXPOSE 10000
