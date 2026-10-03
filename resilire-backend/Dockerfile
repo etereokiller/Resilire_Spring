@@ -2,12 +2,11 @@
 FROM maven:3.9.6-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 
-# Copiar todo el proyecto para compilar sin problemas
+# Copiar todo el proyecto al contenedor
 COPY . .
 
-# Asegurar permisos de ejecución para mvnw y compilar directo
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+# Compilar usando el Maven del sistema directamente (sin depender del wrapper)
+RUN mvn clean package -DskipTests
 
 # --- Run Stage ---
 FROM eclipse-temurin:21-jre-alpine
