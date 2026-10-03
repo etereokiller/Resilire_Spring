@@ -18,6 +18,7 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
+    repair-on-migrate: true
   messages:
     basename: messages
     encoding: UTF-8
