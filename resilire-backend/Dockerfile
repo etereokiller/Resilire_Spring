@@ -1,29 +1,33 @@
-# Etapa de compilación
-FROM eclipse-temurin:21-jdk-jammy AS build
+# --- Build Stage ---
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 
-# Copiar archivos de Maven y dependencias
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
+# Copiar archivos de configuración y dependencias primero para aprovechar la caché de Docker
+COPY pom.xml .
+COPY mvnw .
+COPY .mvn .mvn
 
-# Dar permisos de ejecución al wrapper de Maven
+# Asegurar permisos de ejecución para mvnw
 RUN chmod +x mvnw
 
-RUN ./mvnw dependency:go-offline
+# Descargar las dependencias (esto acelera las compilaciones si no cambian)
+RUN ./mvnw dependency:go-offline -B
 
-# Copiar el código fuente y compilar el proyecto
-COPY src/ src/
+# Copiar el código fuente
+COPY src src
+
+# Compilar el paquete (ignorando tests para un build más limpio y rápido en la nube)
 RUN ./mvnw clean package -DskipTests
 
-# Etapa de ejecución final
-FROM eclipse-temurin:21-jre-jammy
+# --- Run Stage ---
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
-# Copiar el jar generado desde la etapa anterior
+# Copiar el JAR generado desde la etapa de compilación
 COPY --from=build /app/target/*.jar app.jar
 
-# Exponer el puerto del backend
-EXPOSE 8081
+# Render asigna y expone dinámicamente el puerto 10000
+EXPOSE 10000
 
-# Comando para ejecutar la aplicación
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Ejecutar la aplicación inyectando el puerto del sistema operativo de Render
+ENTRYPOINT ["java", "-Dserver.port=${PORT:-10000}", "-jar", "app.jar"]
