@@ -5,6 +5,10 @@ WORKDIR /app
 # Copiar archivos de Maven y dependencias
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
+
+# Dar permisos de ejecución al wrapper de Maven
+RUN chmod +x mvnw
+
 RUN ./mvnw dependency:go-offline
 
 # Copiar el código fuente y compilar el proyecto
@@ -18,7 +22,7 @@ WORKDIR /app
 # Copiar el jar generado desde la etapa anterior
 COPY --from=build /app/target/*.jar app.jar
 
-# Exponer el puerto del backend (Render asigna el puerto mediante la variable PORT, por defecto usamos 8081 o 10000)
+# Exponer el puerto del backend
 EXPOSE 8081
 
 # Comando para ejecutar la aplicación
